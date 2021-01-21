@@ -19,11 +19,14 @@ export class AppComponent {
       temperatura: '18'
     }
   ];
-  selezionata: string;
-  seleziona(name: string) {
-    this.selezionata = name;
-  }
+  selezionata: any;
   clean() {
     this.selezionata=undefined;
+  }
+  seleziona(itemName: string) {
+    var trovato = this.cities.filter(
+      el => ( el.nome === itemName )
+    );
+    this.selezionata = trovato[0];
   }
 }
