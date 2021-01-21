@@ -2,7 +2,7 @@
 
 <ul>
   <li *ngFor='let city of cities' >
-    <button (click)="seleziona(city.nome)">{{city.nome}}</button>
+    <button (click)="refreshTemperature(city.nome)">{{city.nome}}</button>
   </li>
 </ul>
 
