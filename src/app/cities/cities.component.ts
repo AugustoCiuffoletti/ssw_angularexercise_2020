@@ -12,8 +12,8 @@ export class CitiesComponent implements OnInit {
   selezionata: string;
   temperatura: string;
   constructor(private wbs: WeatherbitService) { }
-  clean() {
-    this.selezionata=undefined;
+  update(x) {
+    this.temperatura = x.data[0].temp;
   }
   refreshTemperature(itemName: string) {
     this.selezionata=itemName;

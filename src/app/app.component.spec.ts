@@ -1,11 +1,17 @@
 import { TestBed, async } from '@angular/core/testing';
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
+import { CitiesComponent } from './cities/cities.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        HttpClientModule
+      ],
       declarations: [
-        AppComponent
+        AppComponent,
+        CitiesComponent
       ],
     }).compileComponents();
   }));
@@ -16,16 +22,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'AngularExercise'`, () => {
+  it(`should have as title 'Esercizio Angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('AngularExercise');
+    expect(app.title).toEqual('Esercizio Angular');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('AngularExercise app is running!');
-  });
 });
