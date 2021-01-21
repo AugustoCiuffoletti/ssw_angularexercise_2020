@@ -10,3 +10,5 @@
   La temperatura a {{selezionata}} e' di {{temperatura}} gradi
   <button (click) = 'clean()'>Chiudi</button>
 </p>
+
+<input #nuovo (keyup.enter)="addCity(nuovo.value);nuovo.value=''">

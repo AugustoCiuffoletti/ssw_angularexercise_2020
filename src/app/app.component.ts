@@ -22,4 +22,9 @@ export class AppComponent {
       err => console.error('Observer got an error: ' + err)
     );
   }
+  addCity(newCity: string) {
+    if (newCity) {
+      this.cities.push(newCity);
+    }
+  }
 }
