@@ -6,6 +6,7 @@
   </li>
 </ul>
 
-<p>
+<p *ngIf = "selezionata !== undefined">
   La citta' selezionata e' {{selezionata}}
+  <button (click) = 'clean()'>Chiudi</button>
 </p>
