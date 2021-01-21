@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Esercizio Angular';
+  selezionata: string;
+  seleziona(name: string) {
+	this.selezionata = name;
+  }
   cities = [
     {
       nome: 'Torino',

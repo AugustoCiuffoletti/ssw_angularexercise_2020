@@ -2,6 +2,10 @@
 
 <ul>
   <li *ngFor='let city of cities' >
-    <b>{{city.nome}}</b> - {{city.temperatura}}
+    <button (click)="seleziona(city.nome)">{{city.nome}}</button>
   </li>
 </ul>
+
+<p>
+  La citta' selezionata e' {{selezionata}}
+</p>
